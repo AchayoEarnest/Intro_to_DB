@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS Customers (
     address TEXT NOT NULL
 );
 
--- Create the orders table
-CREATE TABLE IF NOT EXISTS Orders (
+-- Create the orders table 
+CREATE TABLE IF NOT EXISTS orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     customer_id INT NOT NULL,
     order_date DATE NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS Orders (
 );
 
 -- Create the order_details table
-CREATE TABLE IF NOT EXISTS Order_Details (
+CREATE TABLE IF NOT EXISTS order_details (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     order_id INT NOT NULL,
     book_id INT NOT NULL,
@@ -43,5 +43,3 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
-
--- just a test
