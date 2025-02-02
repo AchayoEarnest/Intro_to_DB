@@ -9,11 +9,13 @@ CREATE TABLE IF NOT EXISTS Authors (
 );
 
 --create the books table
-CREATE TABLE IF NOT EXISTS Books (
+CREATE TABLE IF NOT EXISTS books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
-    customer_name VARCHAR(215) NOT NULL,
-    email VARCHAR(215) UNIQUE NOT NULL,
-    address TEXT NOT NULL,
+    title VARCHAR(130) NOT NULL,
+    author_id INT,
+    price DOUBLE NOT NULL,
+    publication_date DATE,
+    FOREIGN KEY (author_id) REFERENCES authors(author_id) ON DELETE SET NULL
 );
 
 -- Create the customers table
