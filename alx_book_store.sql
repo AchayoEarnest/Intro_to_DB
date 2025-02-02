@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS Authors (
 );
 
 --create the books table
-CREATE TABLE IF NOT EXISTS books (
+CREATE TABLE IF NOT EXISTS Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
     author_id INT,
