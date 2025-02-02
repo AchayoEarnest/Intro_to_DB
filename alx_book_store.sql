@@ -43,3 +43,5 @@ CREATE TABLE IF NOT EXISTS Order_Details (
     FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(book_id) ON DELETE CASCADE
 );
+
+-- just a test
